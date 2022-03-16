@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(2, 2, 22);
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+
+h1 {
+    color: rgb(114, 169, 231);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    background-color: rgb(23, 23, 48);
+}
+
+.search-bar {
+    width: 300px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(2, 2, 22);
+    color: white;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    padding-left: 25px;
+}
+
+.movie {
+    width: 250px;
+    height: 300px;
+    background-color: rgb(23, 23, 48);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 100px auto 0 auto;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* .movie-overview {
+    background-color: ;
+}
