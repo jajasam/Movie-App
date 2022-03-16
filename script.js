@@ -8,12 +8,10 @@ async function getMovies() {
     const response = await fetch(APIURL);
     const responseData = await response.json();
 
-    console.log( responseData);
     const { results } = responseData
-    console.log(results)
 
     results.forEach(result => {
-        const { title, overview, backdrop_path } = result;
+        const { title, backdrop_path, vote_average: rating} = result;
         console.log(backdrop_path)
 
         const li = document.createElement("li");
@@ -24,9 +22,17 @@ async function getMovies() {
         img.src = IMGPATH + backdrop_path;
         li.appendChild(img);
 
+        const div = document.createElement("div");
+        li.appendChild(div)
+
         const movieTitle = document.createElement("h4");
         movieTitle.textContent = title;
-        li.appendChild(movieTitle)
+        div.appendChild(movieTitle)
+    
+        const ratingEl = document.createElement("span");
+        ratingEl.textContent = rating;
+        div.appendChild(ratingEl)
+
         
     })
 }
